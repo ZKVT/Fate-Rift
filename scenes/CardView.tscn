@@ -1,0 +1,102 @@
+[gd_scene format=3 uid="uid://cdcpxgexm0xkb"]
+
+[ext_resource type="Script" uid="uid://cqeawpx75m6cu" path="res://scripts/card_view.gd" id="1_cardview"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_card_frame"]
+bg_color = Color(0.075, 0.058, 0.04, 0.94)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.82, 0.61, 0.31, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_color = Color(0, 0, 0, 0.7)
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cost"]
+bg_color = Color(0.05, 0.24, 0.48, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.75, 0.88, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[node name="CardView" type="Control" unique_id=542148112]
+custom_minimum_size = Vector2(210, 280)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 210.0
+offset_bottom = 280.0
+script = ExtResource("1_cardview")
+
+[node name="Panel" type="Panel" parent="." unique_id=777888664]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_card_frame")
+
+[node name="NameLabel" type="Label" parent="." unique_id=716573627]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 36.0
+offset_top = 9.0
+offset_right = -12.0
+offset_bottom = 36.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.98, 0.86, 0.62, 1)
+theme_override_font_sizes/font_size = 17
+text = "Card"
+horizontal_alignment = 1
+
+[node name="CostLabel" type="Label" parent="." unique_id=521515568]
+layout_mode = 1
+offset_left = 6.0
+offset_top = 5.0
+offset_right = 38.0
+offset_bottom = 37.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_cost")
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ArtTexture" type="TextureRect" parent="." unique_id=347497650]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = 42.0
+offset_right = -12.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="DescriptionLabel" type="Label" parent="." unique_id=1538621156]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = 124.0
+offset_right = -12.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Description"
+autowrap_mode = 3

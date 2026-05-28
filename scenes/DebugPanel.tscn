@@ -1,0 +1,111 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/debug_panel.gd" id="1_debug_panel"]
+
+[node name="DebugPanel" type="Control"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 18.0
+offset_top = 280.0
+offset_right = 380.0
+offset_bottom = 620.0
+mouse_filter = 0
+script = ExtResource("1_debug_panel")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBox" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="TitleLabel" type="Label" parent="PanelContainer/VBox"]
+layout_mode = 2
+text = "Debug Panel (F1)"
+horizontal_alignment = 1
+
+[node name="HealthRow" type="HBoxContainer" parent="PanelContainer/VBox"]
+layout_mode = 2
+
+[node name="HealthAmountSpin" type="SpinBox" parent="PanelContainer/VBox/HealthRow"]
+layout_mode = 2
+min_value = 1.0
+max_value = 999.0
+value = 10.0
+
+[node name="AddHealthButton" type="Button" parent="PanelContainer/VBox/HealthRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Add HP"
+
+[node name="EnergyRow" type="HBoxContainer" parent="PanelContainer/VBox"]
+layout_mode = 2
+
+[node name="EnergyAmountSpin" type="SpinBox" parent="PanelContainer/VBox/EnergyRow"]
+layout_mode = 2
+min_value = 1.0
+max_value = 99.0
+value = 5.0
+
+[node name="AddEnergyButton" type="Button" parent="PanelContainer/VBox/EnergyRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Add Energy"
+
+[node name="DrawRow" type="HBoxContainer" parent="PanelContainer/VBox"]
+layout_mode = 2
+
+[node name="DrawAmountSpin" type="SpinBox" parent="PanelContainer/VBox/DrawRow"]
+layout_mode = 2
+min_value = 1.0
+max_value = 50.0
+value = 1.0
+
+[node name="DrawButton" type="Button" parent="PanelContainer/VBox/DrawRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Draw Cards"
+
+[node name="CardRow" type="HBoxContainer" parent="PanelContainer/VBox"]
+layout_mode = 2
+
+[node name="CardIdEdit" type="LineEdit" parent="PanelContainer/VBox/CardRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "card_id"
+
+[node name="AddCardButton" type="Button" parent="PanelContainer/VBox/CardRow"]
+layout_mode = 2
+text = "Add"
+
+[node name="KillEnemyButton" type="Button" parent="PanelContainer/VBox"]
+layout_mode = 2
+text = "Kill Enemy"
+
+[node name="NextBattleButton" type="Button" parent="PanelContainer/VBox"]
+layout_mode = 2
+text = "Next Battle"
+
+[node name="PrintPilesButton" type="Button" parent="PanelContainer/VBox"]
+layout_mode = 2
+text = "Print Deck/Piles"
+
+[node name="InvincibleCheckBox" type="CheckBox" parent="PanelContainer/VBox"]
+layout_mode = 2
+text = "Invincible"
+
+[node name="HintLabel" type="Label" parent="PanelContainer/VBox"]
+layout_mode = 2
+text = "Only active in debug builds."
+autowrap_mode = 3
+
+[node name="StatusLabel" type="Label" parent="PanelContainer/VBox"]
+layout_mode = 2
+text = "Ready."
+autowrap_mode = 3

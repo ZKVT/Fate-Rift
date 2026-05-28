@@ -1,0 +1,96 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/deck_view.gd" id="1_deck_view"]
+[ext_resource type="PackedScene" path="res://scenes/CardDetailPopup.tscn" id="2_detail"]
+
+[node name="DeckView" type="Control"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_deck_view")
+
+[node name="Overlay" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.72)
+
+[node name="Panel" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 80.0
+offset_top = 48.0
+offset_right = -80.0
+offset_bottom = -48.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Header" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer/Header"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Deck View"
+text = "牌组查看"
+
+[node name="CloseButton" type="Button" parent="Panel/MarginContainer/VBoxContainer/Header"]
+layout_mode = 2
+text = "关闭"
+
+[node name="TabContainer" type="TabContainer" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="FullDeck" type="ItemList" parent="Panel/MarginContainer/VBoxContainer/TabContainer"]
+layout_mode = 2
+fixed_icon_size = Vector2i(64, 86)
+max_columns = 4
+same_column_width = true
+allow_reselect = true
+
+[node name="DrawPile" type="ItemList" parent="Panel/MarginContainer/VBoxContainer/TabContainer"]
+visible = false
+layout_mode = 2
+fixed_icon_size = Vector2i(64, 86)
+max_columns = 4
+same_column_width = true
+allow_reselect = true
+
+[node name="DiscardPile" type="ItemList" parent="Panel/MarginContainer/VBoxContainer/TabContainer"]
+visible = false
+layout_mode = 2
+fixed_icon_size = Vector2i(64, 86)
+max_columns = 4
+same_column_width = true
+allow_reselect = true
+
+[node name="ExhaustPile" type="ItemList" parent="Panel/MarginContainer/VBoxContainer/TabContainer"]
+visible = false
+layout_mode = 2
+fixed_icon_size = Vector2i(64, 86)
+max_columns = 4
+same_column_width = true
+allow_reselect = true
+
+[node name="CardDetailPopup" parent="." instance=ExtResource("2_detail")]
