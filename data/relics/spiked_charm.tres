@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="RelicData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://data/RelicData.gd" id="1_relic"]
+[ext_resource type="Texture2D" path="res://assets/relics/spiked_charm.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_relic")
+relic_id = "spiked_charm"
+relic_name = "尖刺护符"
+description = "受到攻击时反弹 2 点伤害。"
+icon = ExtResource("2_icon")
+trigger_timing = 3
+effect = 2
+value = 2

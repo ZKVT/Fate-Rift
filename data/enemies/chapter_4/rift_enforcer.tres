@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="EnemyData" load_steps=8 format=3]
+
+[ext_resource type="Script" path="res://data/EnemyData.gd" id="1_enemy"]
+[ext_resource type="Script" path="res://data/EnemyAction.gd" id="2_action"]
+[ext_resource type="Texture2D" path="res://assets/enemies/chapter_4/rift_enforcer.png" id="3_art"]
+
+[sub_resource type="Resource" id="DoubleAttack"]
+script = ExtResource("2_action")
+action_type = 0
+value = 18
+hit_count = 2
+intent_text = "攻击 18 x2"
+
+[sub_resource type="Resource" id="Weak"]
+script = ExtResource("2_action")
+action_type = 3
+value = 4
+intent_text = "施加虚弱 4"
+
+[sub_resource type="Resource" id="Strength"]
+script = ExtResource("2_action")
+action_type = 2
+value = 4
+intent_text = "获得力量 4"
+
+[sub_resource type="Resource" id="StrongAttack"]
+script = ExtResource("2_action")
+action_type = 4
+value = 45
+intent_text = "强力攻击 45"
+
+[resource]
+script = ExtResource("1_enemy")
+enemy_id = "rift_enforcer"
+enemy_name = "裂隙执行者"
+chapter = 4
+enemy_type = 1
+max_health = 210
+enemy_art = ExtResource("3_art")
+actions = Array[ExtResource("2_action")]([SubResource("DoubleAttack"), SubResource("Weak"), SubResource("Strength"), SubResource("StrongAttack")])
+description = "执行裂隙意志的重甲精英。"

@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="EnemyData" load_steps=8 format=3]
+
+[ext_resource type="Script" path="res://data/EnemyData.gd" id="1_enemy"]
+[ext_resource type="Script" path="res://data/EnemyAction.gd" id="2_action"]
+[ext_resource type="Texture2D" path="res://assets/enemies/chapter_1/forest_guardian.png" id="3_art"]
+
+[sub_resource type="Resource" id="Attack"]
+script = ExtResource("2_action")
+action_type = 0
+value = 14
+intent_text = "攻击 14"
+
+[sub_resource type="Resource" id="Defend"]
+script = ExtResource("2_action")
+action_type = 1
+value = 20
+intent_text = "防御 20"
+
+[sub_resource type="Resource" id="Weak"]
+script = ExtResource("2_action")
+action_type = 3
+value = 2
+intent_text = "施加虚弱"
+
+[sub_resource type="Resource" id="StrongAttack"]
+script = ExtResource("2_action")
+action_type = 4
+value = 28
+intent_text = "强力攻击 28"
+
+[resource]
+script = ExtResource("1_enemy")
+enemy_id = "forest_guardian"
+enemy_name = "森林守卫"
+chapter = 1
+enemy_type = 2
+max_health = 160
+enemy_art = ExtResource("3_art")
+actions = Array[ExtResource("2_action")]([SubResource("Attack"), SubResource("Defend"), SubResource("Weak"), SubResource("StrongAttack")])
+description = "第一章 Boss。TODO：每损失 50 点生命，获得 2 点力量。"
+is_boss = true
+lost_health_step_size = 50
+damage_bonus_per_step = 2

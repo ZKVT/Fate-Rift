@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=5 format=3]
+[ext_resource type="Script" path="res://data/CardData.gd" id="1_card"]
+[ext_resource type="Script" path="res://data/CardEffect.gd" id="2_effect"]
+[ext_resource type="Texture2D" path="res://assets/cards/major_arcana/19.png" id="3_art"]
+[sub_resource type="Resource" id="Effect"]
+script = ExtResource("2_effect")
+effect_type = 24
+value = 0
+[resource]
+script = ExtResource("1_card")
+card_id = "major_19_the_sun"
+card_name = "太阳"
+cost = 5
+description = "对敌人施加 4 层燃烧，然后使敌人的燃烧层数翻倍。"
+card_type = 2
+rarity = 2
+target_type = 0
+art = ExtResource("3_art")
+is_special = true
+effects = Array[ExtResource("2_effect")]([SubResource("Effect")])

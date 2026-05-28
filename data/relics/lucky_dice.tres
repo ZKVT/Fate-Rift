@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="RelicData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://data/RelicData.gd" id="1_relic"]
+[ext_resource type="Texture2D" path="res://assets/relics/lucky_dice.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_relic")
+relic_id = "lucky_dice"
+relic_name = "幸运骰子"
+description = "战斗奖励多显示 1 张卡。"
+icon = ExtResource("2_icon")
+trigger_timing = 4
+effect = 3
+value = 1

@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://data/CardData.gd" id="1_card"]
+[ext_resource type="Script" path="res://data/CardEffect.gd" id="2_effect"]
+
+[sub_resource type="Resource" id="CardEffect_block"]
+script = ExtResource("2_effect")
+effect_type = 1
+value = 8
+
+[sub_resource type="Resource" id="CardEffect_heal"]
+script = ExtResource("2_effect")
+effect_type = 6
+value = 3
+
+[resource]
+script = ExtResource("1_card")
+card_id = "second_wind"
+card_name = "Second Wind"
+cost = 2
+description = "Gain 8 Block. Restore 3 HP."
+card_type = 1
+rarity = 1
+target_type = 1
+effects = Array[ExtResource("2_effect")]([SubResource("CardEffect_block"), SubResource("CardEffect_heal")])

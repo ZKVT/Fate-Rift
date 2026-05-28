@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://data/CardData.gd" id="1_card"]
+[ext_resource type="Script" path="res://data/CardEffect.gd" id="2_effect"]
+
+[sub_resource type="Resource" id="CardEffect_energy"]
+script = ExtResource("2_effect")
+effect_type = 3
+value = 2
+
+[resource]
+script = ExtResource("1_card")
+card_id = "spark"
+card_name = "Spark"
+cost = 0
+description = "Gain 2 Energy."
+card_type = 1
+rarity = 0
+target_type = 1
+effects = Array[ExtResource("2_effect")]([SubResource("CardEffect_energy")])

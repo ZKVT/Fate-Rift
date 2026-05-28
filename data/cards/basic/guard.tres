@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://data/CardData.gd" id="1_card"]
+[ext_resource type="Script" path="res://data/CardEffect.gd" id="2_effect"]
+[ext_resource type="Texture2D" path="res://assets/cards/basic/basic_guard.png" id="3_art"]
+
+[sub_resource type="Resource" id="Effect1"]
+script = ExtResource("2_effect")
+effect_type = 1
+value = 5
+
+[resource]
+script = ExtResource("1_card")
+card_id = "basic_guard"
+card_name = "basic_guard"
+name_key = "card.basic_guard.name"
+cost = 1
+description = ""
+description_key = "card.basic_guard.desc"
+card_type = 1
+rarity = 0
+target_type = 1
+art = ExtResource("3_art")
+is_special = false
+deck_category = 0
+effects = Array[ExtResource("2_effect")]([SubResource("Effect1")])

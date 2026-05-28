@@ -1,0 +1,34 @@
+[gd_resource type="Resource" script_class="EnemyData" load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://data/EnemyData.gd" id="1_enemy"]
+[ext_resource type="Script" path="res://data/EnemyAction.gd" id="2_action"]
+[ext_resource type="Texture2D" path="res://assets/enemies/chapter_1/forest_wolf.png" id="3_art"]
+
+[sub_resource type="Resource" id="DoubleAttack"]
+script = ExtResource("2_action")
+action_type = 0
+value = 4
+hit_count = 2
+intent_text = "攻击 4 x2"
+
+[sub_resource type="Resource" id="Attack8"]
+script = ExtResource("2_action")
+action_type = 0
+value = 8
+intent_text = "攻击 8"
+
+[sub_resource type="Resource" id="Charge"]
+script = ExtResource("2_action")
+action_type = 6
+intent_text = "蓄力"
+
+[resource]
+script = ExtResource("1_enemy")
+enemy_id = "forest_wolf"
+enemy_name = "森林狼"
+chapter = 1
+enemy_type = 0
+max_health = 38
+enemy_art = ExtResource("3_art")
+actions = Array[ExtResource("2_action")]([SubResource("DoubleAttack"), SubResource("Attack8"), SubResource("Charge")])
+description = "潜伏在遗迹边缘的狼群猎手。"

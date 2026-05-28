@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=5 format=3]
+[ext_resource type="Script" path="res://data/CardData.gd" id="1_card"]
+[ext_resource type="Script" path="res://data/CardEffect.gd" id="2_effect"]
+[ext_resource type="Texture2D" path="res://assets/cards/major_arcana/21.png" id="3_art"]
+[sub_resource type="Resource" id="Effect"]
+script = ExtResource("2_effect")
+effect_type = 26
+value = 0
+[resource]
+script = ExtResource("1_card")
+card_id = "major_21_the_world"
+card_name = "世界"
+cost = 3
+description = "造成 16 点伤害，获得 16 点护甲，抽 3 张牌，获得 2 点能量，恢复 8 点生命。若本回合打出 5 张或更多牌，跳过敌人回合并补满手牌。"
+card_type = 2
+rarity = 2
+target_type = 3
+art = ExtResource("3_art")
+is_special = true
+effects = Array[ExtResource("2_effect")]([SubResource("Effect")])

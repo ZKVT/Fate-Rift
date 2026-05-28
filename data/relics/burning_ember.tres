@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="RelicData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://data/RelicData.gd" id="1_relic"]
+[ext_resource type="Texture2D" path="res://assets/relics/burning_ember.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_relic")
+relic_id = "burning_ember"
+relic_name = "燃烧火种"
+description = "每场战斗开始给敌人 2 层燃烧。"
+icon = ExtResource("2_icon")
+trigger_timing = 0
+effect = 6
+value = 2

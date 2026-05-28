@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=5 format=3]
+[ext_resource type="Script" path="res://data/CardData.gd" id="1_card"]
+[ext_resource type="Script" path="res://data/CardEffect.gd" id="2_effect"]
+[ext_resource type="Texture2D" path="res://assets/cards/major_arcana/1.png" id="3_art"]
+[sub_resource type="Resource" id="Effect"]
+script = ExtResource("2_effect")
+effect_type = 8
+value = 0
+[resource]
+script = ExtResource("1_card")
+card_id = "major_01_the_magician"
+card_name = "魔术师"
+cost = 1
+description = "获得 1 点能量，抽 2 张牌。本回合下一张打出的牌会额外触发一次。"
+card_type = 2
+rarity = 2
+target_type = 3
+art = ExtResource("3_art")
+is_special = true
+effects = Array[ExtResource("2_effect")]([SubResource("Effect")])

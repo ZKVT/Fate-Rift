@@ -1,0 +1,34 @@
+[gd_resource type="Resource" script_class="EnemyData" load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://data/EnemyData.gd" id="1_enemy"]
+[ext_resource type="Script" path="res://data/EnemyAction.gd" id="2_action"]
+[ext_resource type="Texture2D" path="res://assets/enemies/goblin.png" id="3_art"]
+
+[sub_resource type="Resource" id="Attack5"]
+script = ExtResource("2_action")
+action_type = 0
+value = 5
+intent_text = "攻击 5"
+
+[sub_resource type="Resource" id="Attack7"]
+script = ExtResource("2_action")
+action_type = 0
+value = 7
+intent_text = "攻击 7"
+
+[sub_resource type="Resource" id="Weak"]
+script = ExtResource("2_action")
+action_type = 3
+value = 1
+intent_text = "施加虚弱"
+
+[resource]
+script = ExtResource("1_enemy")
+enemy_id = "goblin"
+enemy_name = "哥布林"
+chapter = 1
+enemy_type = 0
+max_health = 32
+enemy_art = ExtResource("3_art")
+actions = Array[ExtResource("2_action")]([SubResource("Attack5"), SubResource("Attack7"), SubResource("Weak")])
+description = "动作迅捷的小型掠夺者。"

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="RelicData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://data/RelicData.gd" id="1_relic"]
+[ext_resource type="Texture2D" path="res://assets/relics/guardian_stone.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_relic")
+relic_id = "guardian_stone"
+relic_name = "守护石"
+description = "每场战斗开始获得 5 点护甲。"
+icon = ExtResource("2_icon")
+trigger_timing = 0
+effect = 5
+value = 5

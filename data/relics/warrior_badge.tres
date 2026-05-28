@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="RelicData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://data/RelicData.gd" id="1_relic"]
+[ext_resource type="Texture2D" path="res://assets/relics/warrior_badge.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_relic")
+relic_id = "warrior_badge"
+relic_name = "战士徽章"
+description = "攻击牌造成的伤害 +1。"
+icon = ExtResource("2_icon")
+trigger_timing = 2
+effect = 4
+value = 1

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="RelicData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://data/RelicData.gd" id="1_relic"]
+[ext_resource type="Texture2D" path="res://assets/relics/old_ring.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_relic")
+relic_id = "old_ring"
+relic_name = "破旧戒指"
+description = "每场战斗开始时多抽 1 张牌。"
+icon = ExtResource("2_icon")
+trigger_timing = 0
+effect = 0
+value = 1

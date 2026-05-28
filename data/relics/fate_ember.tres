@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="RelicData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://data/RelicData.gd" id="1_relic"]
+[ext_resource type="Texture2D" path="res://assets/relics/fate_ember.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_relic")
+relic_id = "fate_ember"
+relic_name = "命运余烬"
+description = "战斗失败时自动消耗，恢复全部生命，并重新挑战当前关卡。"
+icon = ExtResource("2_icon")
+rarity = "Legendary"
+trigger_timing = 3
+effect = 0
+value = 0

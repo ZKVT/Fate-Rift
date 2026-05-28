@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="RelicData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://data/RelicData.gd" id="1_relic"]
+[ext_resource type="Texture2D" path="res://assets/relics/swift_boots.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_relic")
+relic_id = "swift_boots"
+relic_name = "急速靴"
+description = "第一回合额外抽 2 张牌。"
+icon = ExtResource("2_icon")
+trigger_timing = 0
+effect = 7
+value = 2

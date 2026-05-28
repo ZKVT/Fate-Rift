@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="EnemyData" load_steps=8 format=3]
+
+[ext_resource type="Script" path="res://data/EnemyData.gd" id="1_enemy"]
+[ext_resource type="Script" path="res://data/EnemyAction.gd" id="2_action"]
+[ext_resource type="Texture2D" path="res://assets/enemies/chapter_1/ancient_treant.png" id="3_art"]
+
+[sub_resource type="Resource" id="Defend"]
+script = ExtResource("2_action")
+action_type = 1
+value = 14
+intent_text = "防御 14"
+
+[sub_resource type="Resource" id="Attack"]
+script = ExtResource("2_action")
+action_type = 0
+value = 16
+intent_text = "攻击 16"
+
+[sub_resource type="Resource" id="Strength"]
+script = ExtResource("2_action")
+action_type = 2
+value = 2
+intent_text = "获得力量"
+
+[sub_resource type="Resource" id="DoubleAttack"]
+script = ExtResource("2_action")
+action_type = 0
+value = 8
+hit_count = 2
+intent_text = "攻击 8 x2"
+
+[resource]
+script = ExtResource("1_enemy")
+enemy_id = "ancient_treant"
+enemy_name = "远古树人"
+chapter = 1
+enemy_type = 1
+max_health = 95
+enemy_art = ExtResource("3_art")
+actions = Array[ExtResource("2_action")]([SubResource("Defend"), SubResource("Attack"), SubResource("Strength"), SubResource("DoubleAttack")])
+description = "森林遗迹的古老守护者。"

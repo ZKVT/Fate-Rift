@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://data/CardData.gd" id="1_card"]
+[ext_resource type="Script" path="res://data/CardEffect.gd" id="2_effect"]
+
+[sub_resource type="Resource" id="CardEffect_damage"]
+script = ExtResource("2_effect")
+effect_type = 0
+value = 10
+
+[sub_resource type="Resource" id="CardEffect_burn"]
+script = ExtResource("2_effect")
+effect_type = 4
+value = 6
+
+[resource]
+script = ExtResource("1_card")
+card_id = "inferno"
+card_name = "Inferno"
+cost = 3
+description = "Deal 10 damage. Apply 6 Burn."
+card_type = 0
+rarity = 2
+target_type = 0
+effects = Array[ExtResource("2_effect")]([SubResource("CardEffect_damage"), SubResource("CardEffect_burn")])

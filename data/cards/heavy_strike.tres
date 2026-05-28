@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://data/CardData.gd" id="1_card"]
+[ext_resource type="Script" path="res://data/CardEffect.gd" id="2_effect"]
+
+[sub_resource type="Resource" id="CardEffect_damage"]
+script = ExtResource("2_effect")
+effect_type = 0
+value = 14
+
+[resource]
+script = ExtResource("1_card")
+card_id = "heavy_strike"
+card_name = "Heavy Strike"
+cost = 6
+description = "Deal 14 damage."
+card_type = 0
+rarity = 1
+target_type = 0
+effects = Array[ExtResource("2_effect")]([SubResource("CardEffect_damage")])

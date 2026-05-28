@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="EnemyData" load_steps=8 format=3]
+
+[ext_resource type="Script" path="res://data/EnemyData.gd" id="1_enemy"]
+[ext_resource type="Script" path="res://data/EnemyAction.gd" id="2_action"]
+[ext_resource type="Texture2D" path="res://assets/enemies/chapter_2/blazing_golem.png" id="3_art"]
+
+[sub_resource type="Resource" id="Defend"]
+script = ExtResource("2_action")
+action_type = 1
+value = 18
+intent_text = "防御 18"
+
+[sub_resource type="Resource" id="DoubleAttack"]
+script = ExtResource("2_action")
+action_type = 0
+value = 9
+hit_count = 2
+intent_text = "攻击 9 x2"
+
+[sub_resource type="Resource" id="Burn"]
+script = ExtResource("2_action")
+action_type = 7
+value = 4
+intent_text = "施加燃烧 4"
+
+[sub_resource type="Resource" id="StrongAttack"]
+script = ExtResource("2_action")
+action_type = 4
+value = 24
+intent_text = "强力攻击 24"
+
+[resource]
+script = ExtResource("1_enemy")
+enemy_id = "blazing_golem"
+enemy_name = "烈焰巨像"
+chapter = 2
+enemy_type = 1
+max_health = 125
+enemy_art = ExtResource("3_art")
+actions = Array[ExtResource("2_action")]([SubResource("Defend"), SubResource("DoubleAttack"), SubResource("Burn"), SubResource("StrongAttack")])
+description = "由燃烧岩石构成的巨大构装体。"
